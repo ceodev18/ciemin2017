@@ -1,36 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/splash_ciemin2017"
+    android:id="@+id/ll_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@android:style/Theme.NoTitleBar"
     tools:context="com.kelly.ciemin2017.views.SplashAcitivity">
-    <ImageView
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/ll_contenSplash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:background="@color/blueFacebook"
+            android:id="@+id/b_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Facebook"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+        <Button
+            android:background="@color/blueLinkedin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Linkedin"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <!--<ImageView
         android:background="@drawable/splashscreen"
         android:id="@+id/iv_splash"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center"
-        android:scaleType="fitXY" />
-
-</RelativeLayout>-->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/background_splash"
-    android:layout_gravity="center"
-    android:id="@+id/ll_splash"
-    android:gravity="center"
-    android:orientation="vertical" >
-
-    <ImageView
-        android:layout_gravity="center"
-        android:background="@color/colorAccent"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/iv_splash"
-        />
+        android:scaleType="fitXY" />-->
 
 </LinearLayout>
+

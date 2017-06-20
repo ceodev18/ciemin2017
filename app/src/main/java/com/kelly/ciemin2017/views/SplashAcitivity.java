@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.kelly.ciemin2017.MainActivity;
 import com.kelly.ciemin2017.R;
@@ -62,8 +64,9 @@ public class SplashAcitivity extends AppCompatActivity {
 
         anim = AnimationUtils.loadAnimation(this, R.anim.translate);
         anim.reset();
-        ImageView iv = (ImageView) findViewById(R.id.iv_splash);
-        iv.setOnClickListener(new View.OnClickListener() {
+        LinearLayout ll_contenSplash = (LinearLayout) findViewById(R.id.ll_contenSplash);
+        Button b_facebook=(Button) findViewById(R.id.b_facebook);
+        b_facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(context,MainActivity.class);
@@ -71,8 +74,9 @@ public class SplashAcitivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        iv.clearAnimation();
-        iv.startAnimation(anim);
+
+        ll_contenSplash.clearAnimation();
+        ll_contenSplash.startAnimation(anim);
         splashTread = new Thread() {
             @Override
             public void run() {
